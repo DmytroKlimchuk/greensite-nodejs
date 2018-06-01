@@ -1,0 +1,12 @@
+extends ./layout/layout.pug
+
+block title
+  | Главная страница
+
+block content
+
+  include contents/home
+
+  block scripts
+    script(src="js/home.js")
+

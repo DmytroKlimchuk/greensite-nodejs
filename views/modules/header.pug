@@ -1,0 +1,28 @@
+header.page-header
+	.container-fluid.container-fluid--darkgreen
+		.container.top-info
+			.row.hidden-xs
+				.col-sm-7.col-md-9
+					.phone
+						.phone__item
+							span.phone__title.phone__title--free Toll for free:
+							a(href='tel:+1-(044)-147-0235') +1-(044)-147-0235
+						.phone__item.hidden-sm
+							span.phone__title.phone__title--now Call now:
+							a(href='tel:+1-(044)-147-0336') +1-(044)-147-0336
+				.col-sm-5.col-md-3
+					.social
+						span.social__title Join us:
+						a.social__link.social__link--pn(href='#')
+							i.fa.fa-pinterest(aria-hidden='true')
+						a.social__link.social__link--tw(href='#')
+							i.fa.fa-twitter(aria-hidden='true')
+						a.social__link.social__link--fb(href='#')
+							i.fa.fa-facebook(aria-hidden='true')
+	.container-fluid.nav-container
+		.container.main-header
+			a.logo(href='/')
+				img(src='img/logo.png', alt='крутой логотип Greensite')
+			button.btn-menu(type='button')
+
+			include menu

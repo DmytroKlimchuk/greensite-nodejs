@@ -1,0 +1,30 @@
+main.register-wrapper
+  .container-fluid.container-fluid--ligtgreen.headline
+    .container
+      .row
+        p.page-title Register
+  .container-fluid
+    .container
+      .row
+        .col-xs-12.col-md-6.col-md-offset-3
+          .register.list-block.list-block--green
+            .list-block__head
+              p.list-block__title Register Form
+              button.close
+                i.fa.fa-times
+            .list-block__body
+              form(action='/register', method='post')
+                .form-group
+                  input(type='email', name='email', placeholder='Email')
+                .form-group
+                  input(type='password', name='password', placeholder='Password')
+                .form-group
+                  input(type='password', name='password2', placeholder='Confirm Password')
+                .form-group
+                  input(type='text', name='firstname', placeholder='First name')
+                .form-group
+                  input(type='text', name='lasttname', placeholder='Last name')
+                .form-group
+                  input(type='tel', name='lasttname', placeholder='Phone')
+                .form-group.align-right
+                  button.submit(type='submit', name='send') Register

@@ -1,0 +1,28 @@
+main.login-wrapper
+  .container-fluid.container-fluid--ligtgreen.headline
+    .container
+      .row
+        p.page-title Login
+  .container-fluid
+    .container
+      .row
+        .col-xs-12.col-md-6.col-md-offset-3
+          .login.list-block.list-block--green
+            .list-block__head
+              p.list-block__title Login Form
+              button.close
+                i.fa.fa-times
+            .list-block__body
+              form(action='#', method='post')
+                .form-group
+                  input(type='email', name='email', placeholder='Email')
+                .form-group
+                  input(type='password', name='password', placeholder='Password')
+                .form-group
+                  .row
+                    .col-xs-5.col-sm-6
+                      a.forgot-link(href='/login') Forgot your password?
+                      a.forgot-link(href='/register') Registration & order
+                      a.forgot-link(href='/register') Free registration
+                    .col-xs-7.col-sm-6.align-right
+                      button.submit(type='submit', name='send') login

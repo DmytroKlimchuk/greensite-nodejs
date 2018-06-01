@@ -1,0 +1,308 @@
+main.order-wrapper
+  .container-fluid.container-fluid--ligtgreen.headline
+    .container
+      .row
+        p.page-title Order now
+  .container-fluid
+    .container
+      section.order
+        h2 Order Form
+        p
+          | Confused about the difference in pricing of various writing services? We understand!  Most services charge a set price-per-page, for anything from a high school 5-paragraph essay to a Ph.D. dissertation. This should raise an immediate red flag to you.  No honest and ethical service can do this without using second-rate writers and databases of pre-writt
+        form(action='#', method='post')
+          p.order__title Personal informations
+          .row
+            .col-md-3.col-md-offset-1
+              .field
+                label
+                  | First name
+                  sup *
+            .col-md-6
+              .field
+                input.error(required='', type='text', name='first-name')
+          .row
+            .col-md-3.col-md-offset-1
+              .field
+                label
+                  | Last name
+                  sup *
+            .col-md-6
+              .field
+                input(required='', type='text', name='last-name')
+          .row
+            .col-md-3.col-md-offset-1
+              .field
+                label
+                  | Email
+                  sup *
+                .tooltip
+                  p.tooltip__text Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            .col-md-6
+              .field
+                input(required='', type='email', name='email')
+          .row
+            .col-md-3.col-md-offset-1
+              .field
+                label
+                  | Country code
+                  sup *
+            .col-md-6
+              .field
+                select(name='country')
+                  option(value='USA-1') USA-1
+                  option(value='USA-2') USA-2
+                  option(value='USA-3') USA-3
+                  option(value='USA-4') USA-4
+                  option(value='USA-5') USA-5
+          .row
+            .col-md-3.col-md-offset-1
+              .field
+                label Phone
+                .tooltip
+                  p.tooltip__text Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            .col-md-6
+              .field
+                input(required='', type='tel', name='email')
+          p.order__title Peper informations
+          .row
+            .col-md-3.col-md-offset-1
+              .field
+                label Subject or discipline
+                .tooltip
+                  p.tooltip__text Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            .col-md-6
+              .field
+                select(name='subject')
+                  option(value='') Please select
+                  option(value='USA-1') subject-1
+                  option(value='USA-2') subject-2
+                  option(value='USA-3') subject-3
+                  option(value='USA-4') subject-4
+                  option(value='USA-5') subject-5
+          .row
+            .col-md-3.col-md-offset-1
+              .field
+                label
+                  | Title of your paper
+                  sup *
+                .tooltip
+                  p.tooltip__text Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            .col-md-6
+              .field
+                input(required='', type='text', name='title')
+          .row
+            .col-md-3.col-md-offset-1
+              .field
+                label Type of assignment
+            .col-md-6
+              .field
+                select(name='type')
+                  option(value='') Please select
+                  option(value='USA-1') type-1
+                  option(value='USA-2') type-2
+                  option(value='USA-3') type-3
+                  option(value='USA-4') type-4
+                  option(value='USA-5') type-5
+          .row
+            .col-md-3.col-md-offset-1
+              .field
+                label Urgency
+                .tooltip
+                  p.tooltip__text Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            .col-md-6
+              .field
+                select(name='urgency')
+                  option(value='USA-1') 11 days
+                  option(value='USA-2') type-2
+                  option(value='USA-3') type-3
+                  option(value='USA-4') type-4
+                  option(value='USA-5') type-5
+          .row
+            .col-md-3.col-md-offset-1
+              .field
+                label Writer level
+                .tooltip
+                  p.tooltip__text Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            .col-md-6
+              .field
+                select(name='level')
+                  option(value='USA-1') High school
+                  option(value='USA-2') type-2
+                  option(value='USA-3') type-3
+                  option(value='USA-4') type-4
+                  option(value='USA-5') type-5
+          .row
+            .col-md-3.col-md-offset-1
+              .field
+                label Spacing
+            .col-md-6
+              .field
+                select(name='spacing')
+                  option(value='USA-1') Double spaced
+                  option(value='USA-2') type-2
+                  option(value='USA-3') type-3
+                  option(value='USA-4') type-4
+                  option(value='USA-5') type-5
+          .row
+            .col-md-3.col-md-offset-1
+              .field
+                label Currency
+            .col-md-6
+              .field
+                select(name='currency')
+                  option(value='USA-1') USD
+                  option(value='USA-2') type-2
+                  option(value='USA-3') type-3
+                  option(value='USA-4') type-4
+                  option(value='USA-5') type-5
+          .row
+            .col-xs-4.col-md-3.col-md-offset-1
+              .field
+                label Cost per page
+            .col-xs-5.col-md-6
+              .field
+                input(type='hidden', name='cost', value='12.99')
+                span.total-red 12.99 USD
+          .row
+            .col-md-3.col-md-offset-1
+              .field
+                label Number of pages
+                .tooltip
+                  p.tooltip__text Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            .col-md-6
+              .field
+                select(name='pages')
+                  option(value='USA-1') 1
+                  option(value='USA-2') 2
+                  option(value='USA-3') 3
+                  option(value='USA-4') 4
+                  option(value='USA-5') 5
+          .row
+            .col-xs-6.col-md-3.col-md-offset-1
+              .field
+                label 1-page summary of your paper
+                .tooltip
+                  p.tooltip__text Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            .col-xs-6.col-md-6
+              .field
+                input#summary-page(type='checkbox', name='summary-page', value='12.99')
+                label(for='summary-page') 12.99 USD
+          .row
+            .col-xs-6.col-md-3.col-md-offset-1
+              .field
+                label Draft of your paper
+                .tooltip
+                  p.tooltip__text Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            .col-xs-6.col-md-6
+              .field
+                input#draft(type='checkbox', name='draft', value='6.99')
+                label(for='draft') 6.99 USD
+          .row
+            .col-xs-6.col-md-3.col-md-offset-1
+              .field
+                label Speaker notes
+                .tooltip
+                  p.tooltip__text Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            .col-xs-6.col-md-6
+              .field
+                input#notes(type='checkbox', name='notes', value='6.99')
+                label(for='notes') 6.99 USD
+          .row
+            .col-md-3.col-md-offset-1
+              .field
+                label Style
+            .col-md-6
+              .field
+                select(name='style')
+                  option(value='USA-1') APA
+                  option(value='USA-2') 2
+                  option(value='USA-3') 3
+                  option(value='USA-4') 4
+                  option(value='USA-5') 5
+          .row
+            .col-md-3.col-md-offset-1
+              .field
+                label
+                  | Number of sources / references
+                  sup *
+                .tooltip
+                  p.tooltip__text Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            .col-md-6
+              .field
+                input#number-of-sources1(type='radio', name='number-of-sources', value='6.99')
+                label(for='number-of-sources1') US writer
+                input#number-of-sources2(type='radio', name='number-of-sources', value='6.99')
+                label(for='number-of-sources2') UK writer (+5% to the order total)
+          .row
+            .col-xs-4.col-md-3.col-md-offset-1
+              .field
+                label Total without discount
+            .col-xs-8.col-md-6
+              .field
+                input(type='hidden', name='total', value='12.99')
+                span.total-red 12.99 USD
+          .row
+            .col-md-3.col-md-offset-1
+              .field
+                label
+                  | Your paper instructions
+                  sup *
+            .col-md-6
+              .field
+                textarea(name='instructions', required='', rows='5')
+          .row
+            .col-xs-3.col-md-3.col-md-offset-1
+              .field
+                label Attachment
+            .col-xs-6
+              .field
+                .file_upload
+                  button(type='button') Add file
+                  input(type='file', name='file_upload')
+          .row
+            .col-md-3.col-md-offset-1
+            .col-md-6
+              .field
+                input#agree(type='checkbox', name='agree', value='Yes')
+                label.lite(for='agree') I agree to receive phone calls from you at night in case of emergency
+                br
+                input#subscribe(type='checkbox', name='subscribe', value='Yes')
+                label.lite(for='subscribe') Email me about custom writing service and other product related updates
+          .row
+            .col-md-3.col-md-offset-1
+              .field
+                label Discount code
+            .col-md-6
+              .field
+                .row
+                  .col-xs-6.col-sm-7.col-md-7.col-lg-8
+                    input(type='text', name='discount')
+                  .col-xs-6.col-sm-5.col-md-5.col-lg-4
+                    button(type='button') Apply discount
+          .row
+            .col-md-3.col-md-offset-1
+              .field
+                label Discount code
+                .tooltip
+                  p.tooltip__text Lorem ipsum dolor sit amet, consectetur adipisicing elit
+            .col-md-6
+              .field
+                .row
+                  .col-xs-11
+                    input(type='text', name='discount')
+                  .col-xs-1
+                    button.cancel(type='button')
+          .row
+            .col-md-3.col-md-offset-1
+            .col-md-6
+              button.add(type='button') Add writer
+              br
+              br
+              p.lite
+                | Disclaimer: the service provided is meant to assist you by providing a guideline.
+                | The product provided is intended to be used for research or study purposes.
+              p.total
+                | Grand total price:
+                span 20.46 USD
+              .btn-wrapper
+                input.btn.btn--red(type='submit', value='Order now')

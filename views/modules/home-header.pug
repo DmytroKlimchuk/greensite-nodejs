@@ -1,0 +1,53 @@
+body.nojs
+	header.page-header
+		.container-fluid.container-fluid--darkgreen
+			.container.top-info
+				.row.hidden-xs
+					.col-sm-7.col-md-9
+						.phone
+							.phone__item
+								span.phone__title.phone__title--free Toll for free:
+								a(href="tel:+1-(044)-147-0235") +1-(044)-147-0235
+							.phone__item.hidden-sm
+								span.phone__title.phone__title--now Call now:
+								a(href="tel:+1-(044)-147-0336") +1-(044)-147-0336
+					.col-sm-5.col-md-3
+						.social
+							span.social__title Join us:
+							a.social__link.social__link--pn(href="#")
+								i.fa.fa-pinterest(aria-hidden="true")
+							a.social__link.social__link--tw(href="#")
+								i.fa.fa-twitter(aria-hidden="true")
+							a.social__link.social__link--fb(href="#")
+								i.fa.fa-facebook(aria-hidden="true")
+		.container-fluid.nav-container
+			.container.main-header
+				a.logo(href="/")
+					img(src="img/logo.png" alt="крутой логотип Greensite")
+				button.btn-menu(type="button")
+				nav.menu
+
+				include menu
+
+	.intro-wrapper
+		.container-fluid--darkgreen.container-fluid--intro
+			.container-fluid.container-fluid--border.container-fluid--ligtgreen
+				.container.container--intro
+					.intro.clearfix
+						a.btn.btn--live-chat.visible-lg(href="#") live chat
+						p.intro__title Custom Writing service
+						p.intro__subtitle the key to success
+						.order-info
+							p.order-info__title You are at right place!
+							p.order-info__descr
+								| EssayService.com is a top quality
+								| writing service
+							.btn-wrapper
+								a.btn.btn--red(href="#") Order now
+			.container.hidden-xs.hidden-sm
+				.special-offer
+					span
+						| Special Offer:
+						strong Get limited discounts
+						|  on the first order
+					a(href="#") The list of discounts

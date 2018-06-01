@@ -1,0 +1,177 @@
+main.profile-wrapper
+  .container-fluid.container-fluid--ligtgreen.headline
+    .container
+      .row
+        p.page-title my profile
+  .container-fluid
+    .container
+      .profile
+        .info-bar
+          .row
+            .col-md-3
+              p
+                | Welcome,
+                span.info-bar__name Anry Born
+            .col-md-3
+              p
+                | Account status:
+                strong standart
+            .col-md-3
+              p
+                | Discount: 0% [
+                a(href='#') upgrade to 15%
+                | ]
+            .col-md-3
+              p
+                | Discount code:
+                a(href='mailto:webdesign@gmail.com') webdesign@gmail.com
+        .user-menu
+          ul.user-menu__list
+            li.user-menu__item
+              a.user-menu__link(href='#') My profile
+            li.user-menu__item
+              a.user-menu__link(href='#') PErsonal profile
+            li.user-menu__item
+              a.user-menu__link(href='#') Terms & conditions
+            li.user-menu__item
+              a.user-menu__link(href='#') Affiliate Program
+            li.user-menu__item
+              a.user-menu__link(href='#') Log Out
+        .row
+          .col-md-5
+            form.profile-form(action='#', method='post')
+              .myprofile
+                h3 Your Personal Information
+                .form-group
+                  label Login (discount code)
+                  input(type='text', name='login')
+                .form-group
+                  label Password
+                  input(type='password', name='password')
+                .form-group
+                  label First name
+                  input(type='text', name='first-name')
+                .form-group
+                  label Last name
+                  input(type='text', name='last-name')
+                .form-group
+                  label Password
+                  input(type='password', name='password2')
+                .form-group
+                  label Alternative password
+                  input(type='password', name='alternative-password')
+                .form-group
+                  label Receive E-mail
+                  input#subs(type='checkbox', name='subscribe')
+                  label(for='subs') Email me about custom service and other product related updetes
+                .form-group
+                  label Contact phone
+                  input(type='tel', name='phone')
+                .form-group
+                  label Alternative phone
+                  input(type='text', name='phone2')
+                .form-group
+                  label Allow night calls
+                  input#allow(type='checkbox', name='allow')
+                  label(for='allow') I agree to receive phone calls from you at night in case of emergency
+                .form-group.align-center
+                  button.btn.post__btn(type='submit', name='save') save
+          .col-md-7
+            .orders-box
+              .orders
+                .table
+                  h3 Processing orders
+                  h4 Completed orders
+                  table
+                    thead
+                      tr
+                        th Date
+                        th Order ID
+                        th Title/Topic
+                    tbody
+                      tr
+                        td 2016.02.18
+                        td
+                          a(href='#') 0307722205
+                        td test
+                  .table__summary
+                    .row
+                      .col-xs-3
+                        span Order details
+                      .col-xs-3
+                        span Files (0)
+                      .col-xs-3
+                        span Messages (0/0)
+                      .col-xs-3
+                        span Contact us
+                .table
+                  table
+                    thead
+                      tr
+                        th Date
+                        th Order ID
+                        th Title/Topic
+                    tbody
+                      tr
+                        td 2016.02.18
+                        td
+                          a(href='#') 0307722205
+                        td test
+                  .table__summary
+                    .row
+                      .col-xs-3
+                        span Order details
+                      .col-xs-3
+                        span Files (0)
+                      .col-xs-3
+                        span Messages (0/0)
+                      .col-xs-3
+                        span Contact us
+                .table
+                  table
+                    thead
+                      tr
+                        th Date
+                        th Order ID
+                        th Title/Topic
+                    tbody
+                      tr
+                        td 2016.02.18
+                        td
+                          a(href='#') 0307722205
+                        td test
+                  .table__summary
+                    .row
+                      .col-xs-3
+                        span Order details
+                      .col-xs-3
+                        span Files (0)
+                      .col-xs-3
+                        span Messages (0/0)
+                      .col-xs-3
+                        span Contact us
+                .table
+                  table
+                    thead
+                      tr
+                        th Date
+                        th Order ID
+                        th Title/Topic
+                    tbody
+                      tr
+                        td 2016.02.18
+                        td
+                          a(href='#') 0307722205
+                        td test
+                  .table__summary
+                    .row
+                      .col-xs-3
+                        span Order details
+                      .col-xs-3
+                        span Files (0)
+                      .col-xs-3
+                        span Messages (0/0)
+                      .col-xs-3
+                        span Contact us
+    .btn-wrapper
+      input.btn.btn--red(type='submit', value='Order now')
