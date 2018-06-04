@@ -1,27 +1,42 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const bodyParser = require('body-parser');
+var session = require('express-session');
 
+const notfoundRouter = require('./routes/404');
+const aboutRouter = require('./routes/about');
+const blogRouter = require('./routes/blog');
+const discountsRouter = require('./routes/discounts');
+const howRouter = require('./routes/how');
+const faqRouter = require('./routes/faq');
+const indexRouter = require('./routes/index');
+const loginRouter = require('./routes/login');
+const orderRouter = require('./routes/order');
+const postRouter = require('./routes/post');
+const priceRouter = require('./routes/price');
+const profileRouter = require('./routes/profile');
+const registerRouter = require('./routes/register');
+const samplesRouter = require('./routes/samples');
+const testimonialsRouter = require('./routes/testimonials');
+const logoutRouter = require('./routes/logout');
+const adminRouter = require('./routes/admin');
 
-var notfoundRouter = require('./routes/404');
-var aboutRouter = require('./routes/about');
-var blogRouter = require('./routes/blog');
-var discountsRouter = require('./routes/discounts');
-var howRouter = require('./routes/how');
-var faqRouter = require('./routes/faq');
-var indexRouter = require('./routes/index');
-var loginRouter = require('./routes/login');
-var orderRouter = require('./routes/order');
-var postRouter = require('./routes/post');
-var priceRouter = require('./routes/price');
-var profileRouter = require('./routes/profile');
-var registerRouter = require('./routes/register');
-var samplesRouter = require('./routes/samples');
-var testimonialsRouter = require('./routes/testimonials');
+const app = express();
 
-var app = express();
+var secretValue = 'hs7a68%^&T*(U)(UUGEE$%Uldv';
+// Функция 'express-session' принимает конфигурационный объект
+app.use(session({
+    // если true, сохраняет сеанс в хранилище заново, даже если запрос не изменялся
+    resave : false,
+    // если установленно значение true, приложение сохраняет новые данные, даже если они не менялись
+    saveUninitialized : false,
+    // ключ используемый для подписания cookie файла (идентификатора сеанса)
+    secret: secretValue
+}));
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -33,6 +48,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+    extended: true
+}));
 
 app.use('/404', notfoundRouter);
 app.use('/about', aboutRouter);
@@ -49,6 +68,8 @@ app.use('/profile', profileRouter);
 app.use('/register', registerRouter);
 app.use('/samples', samplesRouter);
 app.use('/testimonials', testimonialsRouter);
+app.use('/logout', logoutRouter);
+app.use('/admin', adminRouter);
 
 
 // catch 404 and forward to error handler

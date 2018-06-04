@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
+const Blog = require('../controller/PostController');
+
 /* GET home page. */
-router.get('/', function(req, res, next) {
-    res.render('blog', { title: 'Express' });
-});
+router.get('/', Blog.getPosts);
 
 module.exports = router;

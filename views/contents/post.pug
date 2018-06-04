@@ -8,47 +8,40 @@ main.blog-wrapper
       .articles
         .row
           .col-md-10.col-md-offset-2
-            article.post
-              .post__info
-                time.post__date(datetime='2014-08-03', pubdate='')
-                  p.post__month AUG
-                  p.post__day 3
-                  p.post__year 2014
-                .post__comments
-                  p 12
-                  p comments
-                .post__links.hidden-sm.hidden-xs
-                  .tag
-                    p.tag__title Categories:
-                    p.tag__body Essays, Writings
-                  .tag
-                    p.tag__title Tegs:
-                    p.tag__body Essays, Writings
-                  .social
-                    span.social__title Share:
-                    a.social__link.social__link--pn(href='#')
-                      i.fa.fa-pinterest(aria-hidden='true')
-                    a.social__link.social__link--tw(href='#')
-                      i.fa.fa-twitter(aria-hidden='true')
-                    a.social__link.social__link--fb(href='#')
-                      i.fa.fa-facebook(aria-hidden='true')
-              .post__image
-                img(src='img/post_img.jpg', alt='')
-              .post__author
-                | Posted by
-                strong Sara brash
-              h4.post__title Lorem ipsum dolor sit amet
-              .post__descr
-                p
-                  | Student years are the best time of one’s life. You are in the prime of your life and hopeful about the bright future ahead. This is the period that leaves the funniest photos, the sweetest memories, and gives you the most faithful friends. However, there is one thing that spoils all the fun – assignment writing. Have you ever struggled to write an essay or prepare a speech only to find that the deadline is getting closer, and the work is not ready yet? Are you desperate for someone to have your paper done? Ordering it online is a really convenient option, but you must be sure that the final product is worth the price. EssaysService.com is one of the leading online writing centers that deliver only premium quality essays, term papers, and research papers.
-                p
-                  | Once you place an order and provide all the necessary instructions, one of our writers will start working on it. Be sure we won’t choose a person to do your paper at random. The writer assigned will hold an academic degree in the respective area of expertise, which makes it possible for him/her to find the relevant information, carry out exhaustive research, and develop a comprehensible and well-organized document.
-                p
-                  | Student years are the best time of one’s life. You are in the prime of your life and hopeful about the bright future ahead. This is the period that leaves the funniest photos, the sweetest memories, and gives you the most faithful friends. However, there is one thing that spoils all the fun – assignment writing. Have you ever struggled to write an essay or prepare a speech only to find that the deadline is getting closer, and the work is not ready yet? Are you desperate for someone to have your paper done? Ordering it online is a really convenient option, but you must be sure that the final product is worth the price. EssaysService.com is one of the leading online writing centers that deliver only premium quality essays, term papers, and research papers.
-                p
-                  | Once you place an order and provide all the necessary instructions, one of our writers will start working on it. Be sure we won’t choose a person to do your paper at random. The writer assigned will hold an academic degree in the respective area of expertise, which makes it possible for him/her to find the relevant information, carry out exhaustive research, and develop a comprehensible and well-organized document.
-                p
-                  | Student years are the best time of one’s life. You are in the prime of your life and hopeful about the bright future ahead. This is the period that leaves the funniest photos, the sweetest memories, and gives you the most faithful friends. However, there is one thing that spoils all the fun – assignment writing. Have you ever struggled to write an essay or prepare a speech only to find that the deadline is getting closer, and the work is not ready yet? Are you desperate for someone to have your paper done? Ordering it online is a really convenient option, but you must be sure that the final product is worth the price. EssaysService.com is one of the leading online writing centers that deliver only premium quality essays, term papers, and research papers.
+            - var  monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            each post in posts
+              article.post
+                .post__info
+                  time.post__date(datetime='2014-08-03', pubdate='')
+                    p.post__month= monthNames[post.date.getMonth()]
+                    p.post__day= post.date.getDate()
+                    p.post__year= post.date.getFullYear()
+                  .post__comments
+                    p 12
+                    p comments
+                  .post__links.hidden-sm.hidden-xs
+                    .tag
+                      p.tag__title Categories:
+                      p.tag__body Essays, Writings
+                    .tag
+                      p.tag__title Tegs:
+                      p.tag__body Essays, Writings
+                    .social
+                      span.social__title Share:
+                      a.social__link.social__link--pn(href='#')
+                        i.fa.fa-pinterest(aria-hidden='true')
+                      a.social__link.social__link--tw(href='#')
+                        i.fa.fa-twitter(aria-hidden='true')
+                      a.social__link.social__link--fb(href='#')
+                        i.fa.fa-facebook(aria-hidden='true')
+                .post__image
+                  img(src='/uploads/' + post.image, alt='')
+                .post__author
+                  | Posted by
+                  strong= post.author
+                h4.post__title= post.title
+                .post__descr= post.description
+
             section.comments.clearfix
               h3 Comments
               .comment__wrapper

@@ -7,22 +7,22 @@ const postSchema = new Schema({
         required : true
     },
     date : {
-        type : String,
-        required : true
+        type: Date,
+        default: Date.now
     },
     image : {
         type : String,
         default : 'img/post_img.jpg'
+    },
+    title : {
+        type : String,
+        required : true
     },
     description : {
         type : String,
         required : true
     },
     views : {
-        type : Number,
-        default : 0
-    },
-    ratings : {
         type : Number,
         default : 0
     }

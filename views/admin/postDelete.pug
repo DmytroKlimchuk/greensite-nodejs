@@ -1,0 +1,27 @@
+main.register-wrapper
+  .container-fluid.container-fluid--ligtgreen.headline
+    .container
+      .row
+        p.page-title Видалити пост
+  .container-fluid
+    .container
+      .row
+        .col-xs-12.col-md-6.col-md-offset-3
+          .register.list-block.list-block--green
+            .list-block__head
+              p.list-block__title Видалити пост
+              button.close
+                i.fa.fa-times
+            .list-block__body
+              .box
+                - if (errors)
+                  each error in errors
+                    .alert.alert-danger= error
+
+                - if (success)
+                  .alert.alert-success= success
+                  br
+                  .form-group
+                  .row
+                    .col-xs-5.col-sm-6
+                      a.forgot-link(href='/blog') Повернутися до блогу

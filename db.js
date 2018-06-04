@@ -1,4 +1,4 @@
-const DB = require('mongoose');
+const mongoose = require('mongoose');
 
 const DB = {
     connect : function () {

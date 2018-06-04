@@ -1,9 +1,14 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-    res.render('register', { title: 'Express' });
+const auth = require('../controller/AuthController');
+
+/* GET page. */
+router.get('/', function(req, res) {
+    if(req.session.userEmail) res.redirect('/profile');
+    res.render('register', { Auth: req.session.userEmail });
 });
+
+router.post('/', auth.register);
 
 module.exports = router;

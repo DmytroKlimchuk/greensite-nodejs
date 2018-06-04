@@ -20,5 +20,12 @@ nav.menu
       a.menu__link(href='/blog') Blog
     li.menu__item
       a.menu__link(href='/samples') Samples
-    li.menu__item
-      a.menu__link(href='/login') Login
+
+    - if(!Auth)
+      li.menu__item
+        a.menu__link(href='/login') Login
+    - else
+      li.menu__item
+        a.menu__link(href='/profile') Profile
+      li.menu__item
+        a.menu__link(href='/logout') Exit

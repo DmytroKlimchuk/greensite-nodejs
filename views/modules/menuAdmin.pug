@@ -1,0 +1,8 @@
+nav.menu
+  ul.menu__list
+    - if(!Auth)
+      li.menu__item
+        a.menu__link(href='/login') Login
+    - else
+      li.menu__item
+        a.menu__link(href='/blog') Blog

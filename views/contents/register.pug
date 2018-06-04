@@ -13,18 +13,32 @@ main.register-wrapper
               button.close
                 i.fa.fa-times
             .list-block__body
-              form(action='/register', method='post')
-                .form-group
-                  input(type='email', name='email', placeholder='Email')
-                .form-group
-                  input(type='password', name='password', placeholder='Password')
-                .form-group
-                  input(type='password', name='password2', placeholder='Confirm Password')
-                .form-group
-                  input(type='text', name='firstname', placeholder='First name')
-                .form-group
-                  input(type='text', name='lasttname', placeholder='Last name')
-                .form-group
-                  input(type='tel', name='phone', placeholder='Phone')
-                .form-group.align-right
-                  button.submit(type='submit', name='send') Register
+              .box
+                - if (errors)
+                    each error in errors
+                      .alert.alert-danger= error
+
+                - if (success)
+                    .alert.alert-success= success
+
+                    .form-group
+                      .row
+                        .col-xs-5.col-sm-6
+                          a.forgot-link(href='/login') Авторизуватися на сайті
+
+              if !success
+                form(action='/register', method='post')
+                  .form-group
+                    input(type='email', name='email', placeholder='Email' )
+                  .form-group
+                    input(type='password', name='password', placeholder='Password' )
+                  .form-group
+                    input(type='password', name='password2', placeholder='Confirm Password' )
+                  .form-group
+                    input(type='text', name='firstname', placeholder='First name')
+                  .form-group
+                    input(type='text', name='lastname', placeholder='Last name')
+                  .form-group
+                    input(type='tel', name='phone', placeholder='Phone')
+                  .form-group.align-right
+                    button.submit(type='submit', name='send') Register
